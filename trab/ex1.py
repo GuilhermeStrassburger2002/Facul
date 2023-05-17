@@ -14,6 +14,9 @@ class Figurinha():
     def imprimirfig(self):
         print(self.nro,' ',self.nome,' ', self.conteudo, ' ', self.nroPagina)  
 
+    def get_lista(self):
+        return self.listaFigurinhas
+
     def carregarFigurinhas(self):
         arqFigurinhas = open('Figurinha.csv')
         leitor = csv.reader(arqFigurinhas,delimiter=';')
@@ -37,6 +40,8 @@ class Usuario():
         self.figurinhas = []
         self.figpossui = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
         self.trocas = []
+        self.true = True
+        self.fig = Figurinha(0,0,0,0)
 
     def getfigpossui(self):
         return self.figpossui
@@ -49,17 +54,17 @@ class Usuario():
     def ver_album(self):
         for i in range(0, 15):
             if self.figpossui[i] > 0:
-                fig.listaFigurinhas[i].imprimirfig()
+                self.fig.get_lista()[i].imprimirfig()
         pagina_atual = 0
-        while True:
+        while self.true == True:
             print(f"Página {pagina_atual + 1}")
             for linha in self.album[pagina_atual]:
-                for figurinha in linha:
-                    if figurinha is None:
+                for self.figpossui in linha:
+                    if self.figpossui == 0:
                         print("  ", end="")
-                    elif figurinha.status == 1:
+                    elif self.figpossui.status == 1:
                         print(" X", end="")
-                    elif figurinha.status == 2:
+                    elif self.figpossui.status == 2:
                         print(" T", end="")
                     else:
                         print(" O", end="")
@@ -87,38 +92,6 @@ class Usuario():
             # dados = list(leitor_csv)
         # return dados
     
-    def gerenciar_colecao(self):
-        while True:
-            print("Figurinhas disponíveis para troca:")
-            for figurinha in self.figurinhas:
-                if figurinha.status == 2:
-                    print(f"{figurinha.codigo} - {figurinha.nome}")
-            print("1 - Marcar figurinha como disponível para troca")
-            print("2 - Marcar figurinha como não disponível para troca")
-            print("3 - Ver minhas figurinhas")
-            print("4 - Voltar ao menu anterior")
-            opcao = input("Digite uma opção: ")
-            if opcao == "1":
-                codigo = int(input("Digite o código da figurinha que deseja marcar como disponível para troca: "))
-                figurinha = self.encontrar_figurinha(codigo)
-                if figurinha is None:
-                    print("Figurinha não encontrada")
-                else:
-                    figurinha.status = 2
-                    print("Figurinha marcada como disponível para troca")
-            elif opcao == "2":
-                codigo = int(input("Digite o código da figurinha que deseja marcar como não disponível para troca: "))
-                figurinha = self.encontrar_figurinha(codigo)
-                if figurinha is None:
-                    print("Figurinha não encontrada")
-                else:
-                    figurinha.status = 0
-                    print("Figurinha marcada como não disponível para troca")
-            elif opcao == "3":
-                print("Minhas figurinhas:")
-                for figurinha in self.figurinhas:
-                    print(f"{figurinha.codigo} - {figurinha}")
-
     def pacotrinho(self):
         fig1 = random.randint(0,14)
         fig2 = random.randint(0,14)
@@ -127,6 +100,24 @@ class Usuario():
         self.figpossui [fig2] = self.figpossui [fig2]+1
         self.figpossui [fig3] = self.figpossui [fig3]+1
         print(self.figpossui)
+
+    # def gerenciar_colecao(self):
+    #     visualizar_colecao(colecao)
+    #     print("1 - Adicionar figurinha ao álbum")
+    #     print("2 - Disponibilizar figurinha para troca")
+    #     print("3 - Ver minhas trocas")
+    #     print("4 - Voltar ao menu anterior")
+    #     opcao = int(input("Escolha uma opção: "))
+    #     if opcao == 1:
+    #         figurinha = int(input("Digite o número da figurinha que deseja adicionar ao álbum: "))
+    #         if figurinha in colecao:
+    #             album[figurinha] = {'status': 0, 'nome': colecao[figurinha]['nome'], 'informacao': colecao[figurinha]['informacao'], 'pagina': (figurinha // 5) + 1}
+    #             del colecao[figurinha]
+    #             print(f"Figurinha {figurinha} adicionada ao álbum.")
+    #         else:
+    #             print("Você não possui essa figurinha.")
+    #     elif opcao == 2:
+    #         figurinha
 #-------------------------------------------------------------------------------------------------
 
 # Função para salvar os dados no arquivo csv
@@ -193,6 +184,7 @@ def gerenciar_colecao(album, colecao, trocas):
 # Aqui é onde tudo aconte!
 
 sair = False
+opc = False
 usu = Usuario()
 fig = Figurinha(0, 0, 0, 0)
 
@@ -209,6 +201,7 @@ def carregar_dados():
 
 carregar_dados()
 fig.carregarFigurinhas()
+fig.imprimirfig()
 
 while sair == False:
     print("------ MENU -------")
@@ -219,13 +212,28 @@ while sair == False:
 
     if opcaoMenu == 1:
 
-        usu.pacotrinho()
-        usu.ver_album()
-        # usu.novo_usuario()
-        # usu.carregar_dados()
+        usu.novo_usuario()
+        usu.carregar_dados()
 
     elif opcaoMenu == 2:
-        pass
+            while opc == False:
+                print("------ MENU -------")
+                print("1 - Ver Album.")
+                print("2 - Colar Figurinha.")
+                print("3 - Abrir Pacotinho.")
+                print("4 - Voltar")
+                opcaoMenu2 = int(input('Escola uma das opção:'))
+                if opcaoMenu2 == 1:
+                    usu.ver_album()
+                
+                # elif opcaoMenu2 == 2:
+
+                elif opcaoMenu2 == 3:
+                    usu.pacotrinho()
+
+                elif opcaoMenu2 == 4:
+                    opc = True
+    
 
     elif opcaoMenu == 3:
         # Função para salvar os dados no arquivo csv
