@@ -1,0 +1,50 @@
+01,serie,Game of Thrones,Drama,18,2011,8-73
+02,serie,Breaking Bad,Crime,18,2008,5-62
+03,serie,Friends,Romance,12,1994,10-236
+04,serie,Stranger Things,Terror,16,2016,4-34
+05,serie,Black Mirror,Suspense,16,2010,5-22
+06,serie,The Crown,História,16,2016,6-60
+07,serie,Better Call Saul,Drama,16,2015,6-63
+08,serie,Peaky Blinders,Drama,18,2013,6-30
+09,serie,The Mandalorian,Ação,12,2019,3-24
+10,serie,The Witcher,Aventura,16,2019,2-16
+11,filme,Interestelar,ficção,2014,12,120m
+12,filme,Coringa,ficção,2019,14,90m
+13,filme,Parasita,Terro,2019,16,90m
+14,filme,O Poderoso Chefão,suspense,1972,14,120m
+15,filme,Pulp Fiction: Tempo de Violência,policial,1994,16,120m
+16,filme,O Senhor dos Anéis: A Sociedade do Anel,fantasia,2001,12,150m
+17,filme,A Origem,ficção,2010,12,120m
+18,filme,Clube da Luta,suspense,1999,12,90m
+19,filme,A Viagem de Chihiro,aventura,2001,L,100m
+20,filme,Blade Runner 2049,ficção,2017,12,90m
+21,documentario,The Social Dilemma,Document rio/Drama,2020,14 anos,Jeff Orlowski
+22,documentario,13th,Document rio/Crime,2016,16 anos,Ava DuVernay
+23,documentario,"Tiger King: Murder, Mayhem and Madness",Document rio/Crime,2020,16 anos,"Eric Goode, Rebecca Chaiklin"
+24,documentario,Blackfish,Document rio,2013,12 anos,Gabriela Cowperthwaite
+25,documentario,Fyre: The Greatest Party That Never Happened,Document rio,2019,14 anos,Chris Smith
+26,documentario,Icarus,Document rio/Esporte,2017,16 anos,Bryan Fogel
+27,documentario,The Keepers,Document rio/Crime,2017,16 anos,Ryan White
+28,documentario,Chef's Table,Document rio/Gastronomia,2015,Livre,David Gelb
+29,documentario,Wild Wild Country,Document rio/Crime,2018,16 anos,"Chapman Way, Maclain Way"
+30,documentario,The Last Dance,Document rio/Esporte,2020,14 anos,Jason Hehir
+31,animacao,Toy Story 4,Animação/Aventura,2019,Livre,Pixar Animation Studios
+32,animacao,Moana: Um Mar de Aventuras,Animação/Aventura,2016,Livre,Walt Disney Animation Studios
+33,animacao,Zootopia: Essa Cidade é o Bicho,Animação/Aventura,2016,Livre,Walt Disney Animation Studios
+34,animacao,A Viagem de Chihiro,Animação/Aventura,2001,Livre,Studio Ghibli
+35,animacao,Frozen: Uma Aventura Congelante,Animação/Aventura,2013,Livre,Walt Disney Animation Studios
+36,animacao,Como Treinar o seu Dragão,Animação/Aventura,2010,Livre,DreamWorks Animation
+37,animacao,O Rei Leão,Animação/Aventura,1994,Livre,Walt Disney Animation Studios
+38,animacao,A Era do Gelo,Animação/Aventura,2002,Livre,Blue Sky Studios
+39,animacao,Kung Fu Panda,Animação/Aventura,2008,Livre,DreamWorks Animation
+40,animacao,Up: Altas Aventuras,Animação/Aventura,2009,Livre,Pixar Animation Studios
+41,programa,The Tonight Show Starring Jimmy Fallon,Talk show/Entretenimento,2014,Livre,NBC
+42,programa,The Daily Show with Trevor Noah,Talk show/Comédia,1996,16 anos,Comedy Central
+43,programa,America's Got Talent,Reality show/Talento,2006,Livre,NBC
+44,programa,MasterChef,Reality show/Culinária,2010,Livre,Fox
+45,programa,The Voice,Reality show/Música,2011,Livre,NBC
+46,programa,Late Show with Stephen Colbert,Talk show/Entretenimento,2015,12 anos,CBS
+47,programa,Britain's Got Talent,Reality show/Talento,2007,Livre,ITV
+48,programa,Dancing with the Stars,Reality show/Dança,2005,Livre,ABC
+49,programa,Saturday Night Live,Comédia/Variety show,1975,16 anos,NBC
+50,programa,America's Funniest Home Videos,Reality show/Comédia,1989,Livre,ABC
